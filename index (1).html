@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacqueline Delgado — AI Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0a0e1a;
+      --bg-card: #131826;
+      --bg-card-hover: #1a2138;
+      --accent: #6366f1;
+      --accent-2: #8b5cf6;
+      --accent-3: #06b6d4;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --border: rgba(99, 102, 241, 0.15);
+      --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated background gradient */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(10, 14, 26, 0.7);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--gradient);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 8px 18px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent-3);
+      margin-bottom: 28px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 88px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-dim);
+      max-width: 640px;
+      margin-bottom: 40px;
+    }
+
+    .hero p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--accent-3);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin-bottom: 56px;
+    }
+
+    /* About */
+    .about-content {
+      font-size: 18px;
+      color: var(--text-dim);
+      line-height: 1.8;
+      max-width: 760px;
+    }
+
+    .about-content strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-content em {
+      color: var(--accent-3);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    /* Skills cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.3s,
+                  background 0.3s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
+      border-color: rgba(99, 102, 241, 0.4);
+      background: var(--bg-card-hover);
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(99, 102, 241, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .card-icon {
+      transform: rotate(-8deg) scale(1.1);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 4px 10px;
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--accent-3);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .project-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 18px 22px;
+      border-radius: 14px;
+      transition: all 0.3s;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .project-pill:hover {
+      border-color: var(--accent);
+      transform: translateX(4px);
+      background: var(--bg-card-hover);
+    }
+
+    .project-pill::before {
+      content: '▸';
+      color: var(--accent-3);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Contact */
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 56px 32px;
+      max-width: 720px;
+      margin: 0 auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+      text-align: left;
+    }
+
+    .contact-item {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: all 0.3s;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .contact-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .contact-value a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .contact-value a:hover {
+      color: var(--accent-3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-dim);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { gap: 18px; }
+      .nav-links a { font-size: 13px; }
+      section { padding: 70px 20px; }
+      .contact-card { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <div class="logo-icon">&lt;/&gt;</div>
+      <span>Jacqueline.dev</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <span class="hero-tag">// AI Software Engineer in Training</span>
+    <h1>
+      Hi, I'm <span class="gradient-text">Jacqueline</span>.<br />
+      I build intelligent software.
+    </h1>
+    <p>
+      Full-stack developer transitioning into <strong>AI Software Engineering</strong>,
+      blending years of data analysis and pattern recognition with modern tools to
+      create user-focused, intelligent solutions.
+    </p>
+    <div class="cta-group">
+      <a href="#contact" class="btn btn-primary">Let's Connect</a>
+      <a href="https://github.com/jdbostonbu-ops" target="_blank" class="btn btn-secondary">View GitHub</a>
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <span class="section-tag">// 01 — About</span>
+    <h2 class="section-title">A different path<br />to engineering.</h2>
+    <p class="about-content">
+      I'm a results-driven engineer with a background in <strong>data-driven decision-making,
+      risk analysis, and behavioral pattern recognition</strong>. After years running my own
+      insurance agency and serving as a <em>Behavior Detection Officer with the Department of
+      Homeland Security</em>, I'm channeling that same analytical mindset into building
+      <strong>scalable, AI-powered applications</strong>. I bring real-world expertise in
+      interpreting complex data, identifying patterns, and creating systems that support
+      intelligent decision-making.
+    </p>
+  </section>
+
+  <section id="skills" class="reveal">
+    <span class="section-tag">// 02 — Skills</span>
+    <h2 class="section-title">What I'm building with.</h2>
+    <p class="section-subtitle">
+      A growing toolkit spanning frontend, backend, AI, and cloud infrastructure.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">⚛️</div>
+        <h3>Full-Stack Development</h3>
+        <p>Building accessible, modern interfaces with HTML, CSS, and JavaScript wired to robust API-driven backends.</p>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>AI Integration</h3>
+        <p>Integrating large language models into professional workflows to build intelligent, decision-supporting tools.</p>
+        <div class="tags">
+          <span class="tag">Anthropic</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">MCP</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">☁️</div>
+        <h3>Cloud & DevOps</h3>
+        <p>Deploying scalable services with cloud-native architecture and automated CI/CD pipelines.</p>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">GitHub</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🗄️</div>
+        <h3>Backend & Databases</h3>
+        <p>Designing API-driven data flows and managing real-time synchronization across distributed systems.</p>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🐍</div>
+        <h3>Python & Logic</h3>
+        <p>Foundational work in data structures, automation scripting, and computational thinking for AI workflows.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">ES6+</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔐</div>
+        <h3>Cybersecurity</h3>
+        <p>(ISC)² Certified in Cybersecurity (CC) — applying security-first thinking to every system I build.</p>
+        <div class="tags">
+          <span class="tag">ISC2 CC</span>
+          <span class="tag">Risk Analysis</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌍</div>
+        <h3>Geospatial Engineering</h3>
+        <p>Building dynamic mapping interfaces with custom 3D globe visualizations and logic-driven markers.</p>
+        <div class="tags">
+          <span class="tag">Mapbox GL</span>
+          <span class="tag">Geo APIs</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Workflow Automation</h3>
+        <p>Connecting third-party tools and APIs to streamline operations through low-code automation platforms.</p>
+        <div class="tags">
+          <span class="tag">N8n</span>
+          <span class="tag">Zapier</span>
+          <span class="tag">MCP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <span class="section-tag">// 03 — Projects</span>
+    <h2 class="section-title">Things I've shipped.</h2>
+    <p class="section-subtitle">
+      A selection from my growing portfolio. Highlights include geospatial APIs, AI integrations, and serverless architecture.
+    </p>
+
+    <div class="projects">
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/ReliefMesh/" target="_blank">ReliefMesh</a></div>
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/solvesync/" target="_blank">SolveSync</a></div>
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/APEXwallet/" target="_blank">APEXwallet</a></div>
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/frame-forge/" target="_blank">FRAME FORGE</a></div>
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/DeveloperPlayhouse/" target="_blank">Developer Playhouse</a></div>
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/SwiftDraft-for-Outlook/" target="_blank">Swiftdraft for Outlook</a></div>
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/image-reveal-project/" target="_blank">Image-Reveal Project</a></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section reveal">
+    <div class="contact-card">
+      <span class="section-tag">// 04 — Contact</span>
+      <h2 class="section-title">Let's build<br />something together.</h2>
+      <p class="section-subtitle" style="margin: 16px auto 0;">
+        Open to opportunities, collaborations, and conversations. Reach out anytime.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:jdbostonbu@gmail.com">jdbostonbu@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Phone</div>
+          <div class="contact-value"><a href="tel:+18602359365">(860) 235-9365</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value"><a href="https://github.com/jdbostonbu-ops" target="_blank">jdbostonbu-ops</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Portfolio</div>
+          <div class="contact-value"><a href="https://g.dev/jd-software-eng" target="_blank">g.dev/jd-software-eng</a></div>
+        </div>
+        <div class="contact-item" style="grid-column: 1 / -1;">
+          <div class="contact-label">Location</div>
+          <div class="contact-value">New London, CT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Jacqueline Delgado · Built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Reveal sections on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Subtle tilt effect on skill cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+        card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+
+</body>
+</html>
