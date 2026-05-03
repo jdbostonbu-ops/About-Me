@@ -11,19 +11,24 @@
 
   <nav>
     <div class="logo">
-      <div class="logo-icon">&lt;/&gt;</div>
-      <span>Jacqueline.dev</span>
+      <div class="logo-code">
+        <span class="logo-comment">// JD</span>
+        <span class="logo-line"><span class="logo-key">const dev</span> <span class="logo-key">= </span><span class="logo-val">true</span><span class="logo-cursor"></span></span>
+      </div>
     </div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <section class="hero">
-    <span class="hero-tag">// AI Software Developer in Training</span>
+    <div class="hero-badges">
+      <span class="hero-tag">// AI Software Developer in Training</span>
+    </div>
     <h1>
       Hi, I'm <span class="gradient-text">Jacqueline</span>.<br />
       I build intelligent software.
@@ -39,18 +44,77 @@
     </div>
   </section>
 
-  <section id="about" class="reveal">
+  <section id="about" class="reveal about-centered">
     <span class="section-tag">// 01 — About</span>
     <h2 class="section-title">A different path<br />to Software Engineering & Development.</h2>
     <p class="about-content">
       I'm a results-driven engineer with a background in <strong>data-driven decision-making,
       risk analysis, and behavioral pattern recognition</strong>. After years running my own
-      insurance agency and serving as a <em>Behavior Detection Officer with the Department of
-      Homeland Security</em>, I'm channeling that same analytical mindset into building
+      agency, I'm channeling that same analytical mindset into building
       <strong>scalable, AI-powered applications</strong>. I bring real-world expertise in
       interpreting complex data, identifying patterns, and creating systems that support
       intelligent decision-making.
     </p>
+
+    <p class="about-flip-label">// Hover each chapter to see how it shaped the engineer I'm becoming</p>
+
+    <div class="about-flip-grid">
+
+      <!-- Chapter 1 — Insurance Agency -->
+      <div class="about-flip-card" tabindex="0" aria-label="Insurance Agency background card">
+        <div class="about-flip-inner">
+          <div class="about-flip-front">
+            <div class="about-flip-number">01</div>
+            <div class="about-flip-icon">🏢</div>
+            <h3>Entreprenuer</h3>
+            <p>New London, CT &mdash; 2012–2024</p>
+            <div class="about-flip-cue">Hover to see the connection ↻</div>
+          </div>
+          <div class="about-flip-back">
+            <div class="about-back-tag">// How it shaped my engineering</div>
+            <p>Running a full-service agency for 12 years meant designing operational systems from the ground up — client onboarding pipelines, claims workflows, and multi-vendor integrations. That's backend architecture and API orchestration without the code. I was also managing large volumes of structured and unstructured data daily, translating it into risk models and recommendations — the same logic that drives database design and AI decision systems. Every system I build today reflects those 12 years of building systems under real-world pressure.</p>
+            <div class="about-back-source">12 yrs · Systems Design · Data Modeling · Risk Analysis</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 2 — DHS -->
+      <div class="about-flip-card" tabindex="0" aria-label="Department of Homeland Security background card">
+        <div class="about-flip-inner">
+          <div class="about-flip-front">
+            <div class="about-flip-number">02</div>
+            <div class="about-flip-icon">🛡️</div>
+            <h3>Behavior Detection Officer</h3>
+            <p>Dept. of Homeland Security &mdash; Boston, MA</p>
+            <div class="about-flip-cue">Hover to see the connection ↻</div>
+          </div>
+          <div class="about-flip-back">
+            <div class="about-back-tag">// How it shaped my engineering</div>
+            <p>At DHS I analyzed real-time data streams — visual, behavioral, environmental — to detect irregularities and classify threat patterns under pressure. That is exactly what machine learning models do: ingest streams, identify anomalies, and classify outcomes. I was also evaluating social engineering behaviors and threat indicators, which maps directly to cybersecurity threat modeling. The mindset of high-stakes, precision decision-making under uncertainty is now embedded in how I think about AI safety, security design, and system reliability.</p>
+            <div class="about-back-source">DHS · Anomaly Detection · Classification · Threat Modeling</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 3 — Now -->
+      <div class="about-flip-card" tabindex="0" aria-label="Current engineering journey card">
+        <div class="about-flip-inner">
+          <div class="about-flip-front">
+            <div class="about-flip-number">03</div>
+            <div class="about-flip-icon">⚡</div>
+            <h3>AI Software Engineer in Training</h3>
+            <p>Next Chapter Apprenticeship &mdash; 2026</p>
+            <div class="about-flip-cue">Hover to see the connection ↻</div>
+          </div>
+          <div class="about-flip-back">
+            <div class="about-back-tag">// Where it's all going</div>
+            <p>I'm currently in a paid software engineering apprenticeship studying full-stack development, AI integration, cloud infrastructure on AWS, and workflow automation. I hold an (ISC)² Cybersecurity Certification and a Master of Science in Criminal Justice from Boston University. My portfolio already includes a geospatial mapping app (ReliefMesh), an AI-powered assistant, and multiple deployed front-end projects. I don't just bring beginner enthusiasm — I bring 15 years of pattern recognition, systems thinking, and real-world decision architecture to every line of code I write.</p>
+            <div class="about-back-source">ISC² CC · MS Criminal Justice · Full-Stack · AI Integration</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section id="skills" class="reveal">
@@ -165,6 +229,156 @@
       <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/Dog-Walking-Business/" target="_blank">Dog Walking Business</a></div>
       <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/SwiftDraft-for-Outlook/" target="_blank">Swiftdraft for Outlook</a></div>
       <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/image-reveal-project/" target="_blank">Image-Reveal Project</a></div>
+      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/DeveloperPlayhouse/" target="_blank">Developer Playhouse</a></div>
+    </div>
+  </section>
+
+  <!-- ── STAT COUNTER STRIP ── -->
+  <div class="stat-strip" id="statStrip">
+    <span class="stat-strip-tag">// by the numbers</span>
+    <div class="stat-grid">
+      <div class="stat-item">
+        <span class="stat-num" data-target="15" data-suffix="+">0</span>
+        <div class="stat-top">Years</div>
+        <div class="stat-bot">Experience</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="8" data-suffix="">0</span>
+        <div class="stat-top">Projects</div>
+        <div class="stat-bot">Shipped</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="4" data-suffix="+">0</span>
+        <div class="stat-top">Credentials</div>
+        <div class="stat-bot">Earned &amp; Active</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="1" data-suffix="">0</span>
+        <div class="stat-top">Apprenticeship</div>
+        <div class="stat-bot">In Progress</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── EDUCATION & CREDENTIALS ── -->
+  <section id="education" class="reveal">
+    <span class="section-tag">// 05 — Education &amp; Credentials</span>
+    <h2 class="section-title">How I got here.</h2>
+    <p class="edu-section-subtitle">Every credential, program, and degree — from Boston University to what I'm studying right now. Hover each card to expand.</p>
+    <div class="edu-grid">
+
+      <div class="edu-card">
+        <div class="edu-default">
+          <span class="edu-icon">🎓</span>
+          <span class="edu-year">APR 2026 – JUL 2026</span>
+          <div class="edu-name">Next Chapter Apprenticeship</div>
+          <div class="edu-tags"><span class="edu-tag active">Active</span><span class="edu-tag">Full-Stack</span><span class="edu-tag">AWS</span></div>
+          <span class="edu-hint">// hover to expand</span>
+        </div>
+        <div class="edu-hover">
+          <div class="hover-tag">// paid apprenticeship</div>
+          <div class="hover-name">Next Chapter Software Engineering</div>
+          <div class="hover-body">Full-stack development with AI integration. Curriculum covers Python, React, Next.js, AWS cloud labs, CI/CD, N8n automation, MCP, and deployment. Four phases: Foundation → Build → Automation → Capstone.</div>
+          <div class="hover-source">Phase 1 of 4 · April – August 2026</div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-default">
+          <span class="edu-icon">🔐</span>
+          <span class="edu-year">APR 2026 – 2029</span>
+          <div class="edu-name">(ISC)² Cybersecurity CC</div>
+          <div class="edu-tags"><span class="edu-tag active">Certified</span><span class="edu-tag">Risk Analysis</span></div>
+          <span class="edu-hint">// hover to expand</span>
+        </div>
+        <div class="edu-hover">
+          <div class="hover-tag">// active certification</div>
+          <div class="hover-name">(ISC)² Certified in Cybersecurity</div>
+          <div class="hover-body">Industry-recognized cybersecurity certification. Security-first thinking applied to every system I design and build. Covers access controls, network security, risk identification, and incident response.</div>
+          <div class="hover-source">Valid April 2026 – 2029</div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-default">
+          <span class="edu-icon">🌐</span>
+          <span class="edu-year">MAR 2026 – PRESENT</span>
+          <div class="edu-name">W3Schools Certification Path</div>
+          <div class="edu-tags"><span class="edu-tag active">Active</span><span class="edu-tag">JS</span><span class="edu-tag">Python</span></div>
+          <span class="edu-hint">// hover to expand</span>
+        </div>
+        <div class="edu-hover">
+          <div class="hover-tag">// certification path</div>
+          <div class="hover-name">W3Schools Front-End &amp; Logic Path</div>
+          <div class="hover-body">Pursuing professional certifications in JavaScript ES6+, Python fundamentals, Responsive Web Design, Bootstrap, DOM manipulation, async APIs, and object-oriented programming logic.</div>
+          <div class="hover-source">March 2026 – present</div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-default">
+          <span class="edu-icon">💻</span>
+          <span class="edu-year">APR 2026 – PRESENT</span>
+          <div class="edu-name">LaunchCode — JS Fundamentals</div>
+          <div class="edu-tags"><span class="edu-tag active">Active</span><span class="edu-tag">Independent Study</span></div>
+          <span class="edu-hint">// hover to expand</span>
+        </div>
+        <div class="edu-hover">
+          <div class="hover-tag">// independent study</div>
+          <div class="hover-name">LaunchCode JavaScript Fundamentals</div>
+          <div class="hover-body">Self-directed independent study applying coding structures in JavaScript, HTML, and CSS. Reinforces foundational programming logic alongside the Next Chapter apprenticeship curriculum.</div>
+          <div class="hover-source">Independent Study · April 2026 – present</div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-default">
+          <span class="edu-icon">🔍</span>
+          <span class="edu-year">APR 2026</span>
+          <div class="edu-name">Google &amp; Mozilla MDN</div>
+          <div class="edu-tags"><span class="edu-tag active">Badges</span><span class="edu-tag">Web Dev</span></div>
+          <span class="edu-hint">// hover to expand</span>
+        </div>
+        <div class="edu-hover">
+          <div class="hover-tag">// google web dev curriculum</div>
+          <div class="hover-name">Google &amp; Mozilla MDN Badges</div>
+          <div class="hover-body">Comprehensive training in semantic HTML5, CSS3, JavaScript, ChromeDev Tools User, Testing, Performance, PWA, Forms, Responsive Design, Accessibility, Privacy, AI, and Images. Portfolio live at g.dev/jd-software-eng.</div>
+          <div class="hover-source">g.dev/jd-software-eng · April 2026</div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-default">
+          <span class="edu-icon">🏛️</span>
+          <span class="edu-year">2010 – 2012</span>
+          <div class="edu-name">Boston University</div>
+          <div class="edu-tags"><span class="edu-tag">MS Degree</span><span class="edu-tag">Criminal Justice</span></div>
+          <span class="edu-hint">// hover to expand</span>
+        </div>
+        <div class="edu-hover">
+          <div class="hover-tag">// graduate degree</div>
+          <div class="hover-name">Master of Science — Criminal Justice</div>
+          <div class="hover-body">Graduate-level training in analytical systems thinking, behavioral pattern recognition, and data-driven decision making. The same skills that now drive my approach to AI systems and software architecture.</div>
+          <div class="hover-source">Boston University · 2010 – 2012</div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-default">
+          <span class="edu-icon">🎓</span>
+          <span class="edu-year">2003 – 2006</span>
+          <div class="edu-name">Mitchell College</div>
+          <div class="edu-tags"><span class="edu-tag">BA Degree</span><span class="edu-tag">Concentration in Business</span></div>
+          <span class="edu-hint">// hover to expand</span>
+        </div>
+        <div class="edu-hover">
+          <div class="hover-tag">// undergraduate degree</div>
+          <div class="hover-name">BA Professional Studies — Business</div>
+          <div class="hover-body">Bachelor of Arts &amp; Professional Studies with a concentration in Business. Built the foundational operational and organizational thinking that carried through 12 years of running my own agency.</div>
+          <div class="hover-source">Mitchell College · New London, CT · 2003 – 2006</div>
+        </div>
+      </div>
+
     </div>
   </section>
 

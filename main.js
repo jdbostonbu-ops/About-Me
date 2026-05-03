@@ -41,3 +41,31 @@
       });
     });
  
+    // Stat counter animation — fires once when strip scrolls into view
+    const statNums = document.querySelectorAll('.stat-num');
+    if (statNums.length) {
+      function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+      function animateCounter(el, target, suffix, duration) {
+        const start = performance.now();
+        function tick(now) {
+          const p = Math.min((now - start) / duration, 1);
+          el.textContent = Math.round(easeOut(p) * target) + (p === 1 ? suffix : '');
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            statNums.forEach((el, i) => {
+              const target = parseInt(el.dataset.target);
+              const suffix = el.dataset.suffix || '';
+              setTimeout(() => animateCounter(el, target, suffix, 1800), i * 120);
+            });
+            statObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      const strip = document.getElementById('statStrip');
+      if (strip) statObserver.observe(strip);
+    }
