@@ -71,6 +71,6 @@ A personal landing page with portfolio built to tell the full story — 15+ year
 
 ## 🎓 Background
 
-This portfolio represents a non-traditional path into software engineering — 12 years running a full-service insurance agency (systems design, data modeling, risk analysis) and 3 years as a Behavior Detection Officer with the Department of Homeland Security (real-time anomaly detection, pattern classification, threat modeling) — all now applied to building scalable, AI-powered applications.
+This portfolio represents a non-traditional path into software engineering — 12 years running a full-service insurance agency (systems design, data modeling, risk analysis) and 3 years as a Behavior Detection & Analysis Officer with the Department of Homeland Security (real-time anomaly detection, pattern classification, threat modeling) — all now applied to building scalable, AI-powered applications and Certified in Cybersecurity.
 
 ⭐ Explore the projects linked above and follow along as the portfolio grows.
