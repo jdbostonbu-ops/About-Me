@@ -1,4 +1,4 @@
-# Jacqueline Delgado — AI Software Engineer 🛡️
+# Jacqueline Delgado — AI Software Engineer in training 🛡️
 
 A personal landing page with portfolio built to tell the full story — 15+ years of real-world pattern recognition, risk analysis, and systems design, now channeled into full-stack AI development. This landing page is itself a demonstration of the skills it describes.
 
