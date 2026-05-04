@@ -806,3 +806,295 @@
       .edu-card:hover { min-height: 380px; }
       .stat-grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ══ STATUS BAR ══ */
+    .status-bar {
+      background: #080c18;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      padding: 9px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 99;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      flex-shrink: 0;
+      animation: statusPulse 2s ease infinite;
+    }
+    @keyframes statusPulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:0.5; transform:scale(1.3); }
+    }
+    .status-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .status-studying {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--accent-3);
+      letter-spacing: 0.04em;
+    }
+
+    /* ══ BILINGUAL BADGE ══ */
+    .badge-bilingual {
+      display: inline-block;
+      padding: 8px 18px;
+      background: rgba(6,182,212,0.1);
+      border: 1px solid rgba(6,182,212,0.3);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent-3);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 640px) {
+      .status-bar { padding: 8px 20px; }
+    }
+
+    /* ══════════════════════════════════════
+       TIMELINE — // 06 Journey
+    ══════════════════════════════════════ */
+    .tl-inner {
+      position: relative;
+      max-width: 580px;
+      margin: 0 auto;
+      padding-top: 8px;
+    }
+
+    .tl-track {
+      position: absolute;
+      left: 68px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: rgba(99,102,241,0.12);
+      border-radius: 2px;
+    }
+
+    .tl-fill {
+      position: absolute;
+      left: 68px;
+      top: 8px;
+      width: 2px;
+      height: 0%;
+      background: linear-gradient(180deg, #6366f1, #8b5cf6, #06b6d4);
+      border-radius: 2px;
+      transition: height 2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tl-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding-bottom: 40px;
+      opacity: 0;
+      transform: translateX(-12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .tl-item:last-child { padding-bottom: 0; }
+
+    .tl-item.tl-vis {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .tl-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      width: 44px;
+      text-align: right;
+      flex-shrink: 0;
+      padding-top: 3px;
+      letter-spacing: 0.04em;
+    }
+
+    .tl-dot-wrap {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      margin-top: 5px;
+    }
+
+    .tl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #0a0e1a;
+      border: 2px solid var(--accent);
+      transition: background 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+      flex-shrink: 0;
+    }
+
+    .tl-item.tl-vis .tl-dot {
+      background: var(--accent);
+    }
+
+    .tl-item.tl-active .tl-dot {
+      background: var(--accent-3);
+      border-color: var(--accent-3);
+      transform: scale(1.4);
+      box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.18);
+    }
+
+    .tl-content { flex: 1; }
+
+    .tl-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .tl-item.tl-active .tl-title {
+      color: var(--accent-3);
+    }
+
+    .tl-sub {
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.55;
+    }
+
+    .tl-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(6, 182, 212, 0.12);
+      color: var(--accent-3);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 100px;
+      padding: 3px 10px;
+      margin-top: 8px;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 640px) {
+      .tl-year { width: 36px; font-size: 11px; }
+      .tl-title { font-size: 14px; }
+    }
+
+    /* ══ SKILLS IN CONTEXT ══ */
+    .skills-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .skills-col-card { background: var(--bg-card); border-radius: 16px; padding: 28px 24px; border: 1px solid var(--border); transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+    .skills-col-card:hover { border-color: rgba(99,102,241,0.4); box-shadow: 0 12px 40px rgba(99,102,241,0.15); }
+    .skills-col-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(99,102,241,0.12); }
+    .skills-col-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .skills-col-dot.using { background: #22c55e; }
+    .skills-col-dot.learning { background: #f59e0b; animation: learningPulse 2s ease infinite; }
+    @keyframes learningPulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .skills-col-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
+    .skills-col-title.using { color: #22c55e; }
+    .skills-col-title.learning { color: #f59e0b; }
+    .skill-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid rgba(99,102,241,0.07); }
+    .skill-row:last-of-type { border-bottom: none; }
+    .skill-row-icon { font-size: 15px; width: 22px; text-align: center; flex-shrink: 0; }
+    .skill-row-name { font-size: 14px; color: var(--text); font-weight: 500; flex: 1; }
+    .skill-row-tag { font-family: 'JetBrains Mono', monospace; font-size: 9px; padding: 3px 8px; border-radius: 5px; font-weight: 500; white-space: nowrap; }
+    .skill-row-tag.shipped { background: rgba(34,197,94,0.1); color: #22c55e; border: 1px solid rgba(34,197,94,0.2); }
+    .skill-row-tag.active { background: rgba(245,158,11,0.1); color: #f59e0b; border: 1px solid rgba(245,158,11,0.2); }
+    .skills-col-footer { margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(99,102,241,0.1); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #444; letter-spacing: 0.06em; }
+    @media (max-width: 640px) { .skills-two-col { grid-template-columns: 1fr; } }
+
+    /* ══ PULL QUOTE ══ */
+    .pull-quote-section {
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(99,102,241,0.08);
+      border-bottom: 1px solid rgba(99,102,241,0.08);
+    }
+
+    .pull-quote-text {
+      font-size: clamp(30px, 3vw, 40px);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      max-width: 920px;
+      margin: 0 auto 28px;
+      position: relative;
+      padding: 40px 0;
+    }
+
+    /* Decorative quote marks — display block so they never overlap text */
+    .pull-quote-text p {
+      quotes: "C" "D";
+      margin: 0;
+    }
+
+    .pull-quote-text p::before {
+      content: '“';
+      display: block;
+      font-size: 100px;
+      line-height: 0.8;
+      color: #6366f1;
+      opacity: 0.25;
+      font-family: Georgia, serif;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .pull-quote-text p::after {
+      content: '”';
+      display: block;
+      font-size: 100px;
+      line-height: 0.8;
+      color: #6366f1;
+      opacity: 0.25;
+      font-family: Georgia, serif;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .pull-quote-highlight {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pull-quote-line {
+      width: 40px;
+      height: 2px;
+      background: var(--gradient);
+      margin: 48px auto 16px;
+      border-radius: 2px;
+    }
+
+    .pull-quote-attr {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 640px) {
+      .pull-quote-section { padding: 60px 24px; }
+    }
+
+.quote-mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.4em;
+  color: #6366f1;
+  opacity: 0.6;
+  line-height: 0;
+  vertical-align: -0.1em;
+}

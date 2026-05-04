@@ -22,9 +22,16 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
+      <a href="#journey">Journey</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
+
+  <div class="status-bar">
+    <div class="status-dot"></div>
+    <span class="status-label">// currently studying</span>
+    <span class="status-studying" id="statusStudying"></span>
+  </div>
 
   <section class="hero">
     <div class="hero-badges">
@@ -32,7 +39,7 @@
     </div>
     <h1>
       Hi, I'm <span class="gradient-text">Jacqueline</span>.<br />
-      I build intelligent software.
+      I turn real-world experience into intelligent solutions.
     </h1>
     <p>
       Learning to build with AI. With over 15 years of experience in data analysis and pattern recognition,
@@ -85,8 +92,8 @@
           <div class="about-flip-front">
             <div class="about-flip-number">02</div>
             <div class="about-flip-icon">🛡️</div>
-            <h3>Behavior Detection Officer</h3>
-            <p>Dept. of Homeland Security &mdash; Boston, MA</p>
+            <h3>Behavior Detection & Analysis</h3>
+            <p>Department of Homeland Security</p>
             <div class="about-flip-cue">Hover to see the connection ↻</div>
           </div>
           <div class="about-flip-back">
@@ -214,6 +221,51 @@
       </div>
     </div>
   </section>
+
+  <!-- ── SKILLS IN CONTEXT ── -->
+  <section id="skills-context" class="reveal">
+    <span class="section-tag">// 02.5 — Skills in context</span>
+    <h2 class="section-title">Building with vs. actively learning.</h2>
+    <p class="section-subtitle">Honest signal of where I am right now — no fake progress bars.</p>
+
+    <div class="skills-two-col">
+
+      <div class="skills-col-card">
+        <div class="skills-col-header">
+          <div class="skills-col-dot using"></div>
+          <span class="skills-col-title using">Currently building with</span>
+        </div>
+        <div class="skill-row"><span class="skill-row-icon">🌍</span><span class="skill-row-name">Mapbox GL JS</span><span class="skill-row-tag shipped">Shipped</span></div>
+        <div class="skill-row"><span class="skill-row-icon">🔥</span><span class="skill-row-name">Firebase Realtime DB</span><span class="skill-row-tag shipped">Shipped</span></div>
+        <div class="skill-row"><span class="skill-row-icon">⚡</span><span class="skill-row-name">HTML · CSS · JS</span><span class="skill-row-tag shipped">Shipped</span></div>
+        <div class="skill-row"><span class="skill-row-icon">🐙</span><span class="skill-row-name">Git · GitHub</span><span class="skill-row-tag shipped">Shipped</span></div>
+        <div class="skill-row"><span class="skill-row-icon">🎞️</span><span class="skill-row-name">GSAP · ScrollTrigger</span><span class="skill-row-tag shipped">Shipped</span></div>
+        <div class="skill-row"><span class="skill-row-icon">⚛️</span><span class="skill-row-name">React · JSX</span><span class="skill-row-tag shipped">Shipped</span></div>
+        <div class="skills-col-footer">// proven in deployed projects</div>
+      </div>
+
+      <div class="skills-col-card">
+        <div class="skills-col-header">
+          <div class="skills-col-dot learning"></div>
+          <span class="skills-col-title learning">Actively studying now</span>
+        </div>
+        <div class="skill-row"><span class="skill-row-icon">⚛️</span><span class="skill-row-name">React · Next.js</span><span class="skill-row-tag active">In progress</span></div>
+        <div class="skill-row"><span class="skill-row-icon">☁️</span><span class="skill-row-name">AWS Cloud Labs</span><span class="skill-row-tag active">In progress</span></div>
+        <div class="skill-row"><span class="skill-row-icon">🐍</span><span class="skill-row-name">Python Fundamentals</span><span class="skill-row-tag active">In progress</span></div>
+        <div class="skill-row"><span class="skill-row-icon">🗄️</span><span class="skill-row-name">SQL · Backend APIs</span><span class="skill-row-tag active">In progress</span></div>
+        <div class="skill-row"><span class="skill-row-icon">⚡</span><span class="skill-row-name">N8n · CI/CD · MCP</span><span class="skill-row-tag active">In progress</span></div>
+        <div class="skill-row"><span class="skill-row-icon">🤖</span><span class="skill-row-name">Anthropic API · LLMs</span><span class="skill-row-tag active">In progress</span></div>
+        <div class="skills-col-footer">// Phase I · Next Chapter Apprenticeship</div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ── PULL QUOTE ── -->
+  <div class="pull-quote-section reveal">
+    <p class="pull-quote-text"><span class="quote-mark">&ldquo;</span>I don&rsquo;t just bring beginner enthusiasm &mdash; I bring <span class="pull-quote-highlight">15 years of pattern recognition, systems thinking,</span> and real-world decision architecture to every line of code I write.<span class="quote-mark">&rdquo;</span></p>
+    <div class="pull-quote-line"></div>
+  </div>
 
   <section id="projects" class="reveal">
     <span class="section-tag">// 03 — Projects</span>
@@ -378,6 +430,73 @@
           <div class="hover-name">BA Professional Studies — Business</div>
           <div class="hover-body">Bachelor of Arts &amp; Professional Studies with a concentration in Business. Built the foundational operational and organizational thinking that carried through 12 years of running my own agency.</div>
           <div class="hover-source">Mitchell College · New London, CT · 2003 – 2006</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── TIMELINE ── -->
+  <section id="journey" class="reveal">
+    <span class="section-tag">// 06 — Journey</span>
+    <h2 class="section-title">The path that got me here.</h2>
+
+    <div class="tl-inner">
+      <div class="tl-track"></div>
+      <div class="tl-fill" id="tlFill"></div>
+
+      <div class="tl-item" id="tl0">
+        <div class="tl-year">2003</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-content">
+          <div class="tl-title">Mitchell College</div>
+          <div class="tl-sub">BA Professional Studies &middot; Business concentration.</div>
+        </div>
+      </div>
+
+      <div class="tl-item" id="tl1">
+        <div class="tl-year">2010</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-content">
+          <div class="tl-title">Boston University</div>
+          <div class="tl-sub">Master of Science in Criminal Justice &middot; Systems thinking at scale</div>
+        </div>
+      </div>
+
+      <div class="tl-item" id="tl2">
+        <div class="tl-year">2012</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-content">
+          <div class="tl-title">Agency Owner</div>
+          <div class="tl-sub">12 years &middot; Risk modeling, data systems, workflow architecture.</div>
+        </div>
+      </div>
+
+      <div class="tl-item" id="tl3">
+        <div class="tl-year">2015</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-content">
+          <div class="tl-title">Dept. of Homeland Security</div>
+          <div class="tl-sub">Behavior Detection & Analysis &middot; Real-time anomaly detection</div>
+        </div>
+      </div>
+
+      <div class="tl-item" id="tl4">
+        <div class="tl-year">2026</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-content">
+          <div class="tl-title">ISC&sup2; CC Certified &middot; Google MDN Badges</div>
+          <div class="tl-sub">Cybersecurity certification &amp; comprehensive web dev self paced curriculum</div>
+        </div>
+      </div>
+
+      <div class="tl-item tl-active" id="tl5">
+        <div class="tl-year">Now</div>
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <div class="tl-content">
+          <div class="tl-title">AI Software Engineer in Training</div>
+          <div class="tl-sub">Next Chapter Paid Apprenticeship &middot; Full-Stack &middot; AI &middot; Cloud &middot; Phase I</div>
+          <div class="tl-badge">&larr; I am here</div>
         </div>
       </div>
 

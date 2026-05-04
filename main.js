@@ -69,3 +69,36 @@
       const strip = document.getElementById('statStrip');
       if (strip) statObserver.observe(strip);
     }
+
+    // ── STATUS BAR ──
+    // To update: change the studying string below, save, push to GitHub
+    const STATUS = {
+      studying: 'Phase I | Think with AI: HTML + CSS'
+    };
+    const statusEl = document.getElementById('statusStudying');
+    if (statusEl) statusEl.textContent = STATUS.studying;
+
+    // ── TIMELINE — fires on scroll via IntersectionObserver ──
+    const tlItems = ['tl0','tl1','tl2','tl3','tl4','tl5'];
+    const tlDelays = [0, 300, 580, 840, 1080, 1320];
+
+    const tlObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const fill = document.getElementById('tlFill');
+          if (fill) {
+            fill.style.height = '100%';
+          }
+          tlItems.forEach((id, i) => {
+            setTimeout(() => {
+              const el = document.getElementById(id);
+              if (el) el.classList.add('tl-vis');
+            }, tlDelays[i] + 200);
+          });
+          tlObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    const tlSection = document.getElementById('journey');
+    if (tlSection) tlObserver.observe(tlSection);
