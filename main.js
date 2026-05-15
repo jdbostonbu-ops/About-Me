@@ -73,7 +73,7 @@
     // ── STATUS BAR ──
     // To update: change the studying string below, save, push to GitHub
     const STATUS = {
-      studying: 'Phase I | Think with AI: Forms + DOM Basics — Make the Page React'
+      studying: 'Phase II | Think with AI: Full-Stack Architecture'
     };
     const statusEl = document.getElementById('statusStudying');
     if (statusEl) statusEl.textContent = STATUS.studying;
