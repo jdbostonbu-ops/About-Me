@@ -73,7 +73,7 @@
     // ── STATUS BAR ──
     // To update: change the studying string below, save, push to GitHub
     const STATUS = {
-      studying: 'Phase II | Design Thinking: Full-Stack Architecture'
+      studying: 'Full-Stack Architecture'
     };
     const statusEl = document.getElementById('statusStudying');
     if (statusEl) statusEl.textContent = STATUS.studying;
