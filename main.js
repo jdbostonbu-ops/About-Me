@@ -12,6 +12,17 @@
       });
     });
 
+    // ── DAILY QUOTE — fetched from Google Apps Script, updated daily via Zapier ──
+fetch('https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnR79E5CJf8nb6cTkXFePwL1tzzEdRQbDhzpQHMhobkozhAMQ8JiLzVrMGGaciOTiQ2Xh8Dz17BlduYib9J0daHv_vLAJiE_YbTIZ3W_an0XcAZJucIOyqb0URWmcdkuAMCmKxmEiU0G1nowHQh2ZxqWuGiszmmRVpTB_B9Dy0t74-VayU42SbM0jdiQ1Ho8nruxsX54FHEQ0z08xklLOl-5NXzKw1cPum-BCekbtswljn3gLfqGg6MJd8XZXjrExuUwR7pTQIV1cIuwCh2CvWzPP8Q5lg&lib=MmBjHGtP4zKa_GclqV1ldia5rqA7RFE1E')
+  .then(function (response) { return response.json(); })
+  .then(function (data) {
+    const quoteEl = document.getElementById('daily-quote');
+    if (quoteEl) quoteEl.textContent = data.quote;
+  })
+  .catch(function (error) {
+    console.error('Could not load daily quote:', error);
+  });
+
     // Reveal sections on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
