@@ -1282,3 +1282,28 @@
   line-height: 0;
   vertical-align: -0.1em;
 }
+
+  .chatbot-section {
+    text-align: center;
+  }
+
+  .chatbot-section .section-subtitle {
+    margin: 16px auto 32px;
+  }
+
+  .embed-section iframe {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 24px;
+  }
+
+  .embedded-subtitle {
+    font-size: 17px;
+    color: var(--text-dim);
+    max-width: 700px;
+    margin: 16px auto 56px;
+    text-align: center;
+  }
