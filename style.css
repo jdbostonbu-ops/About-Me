@@ -186,6 +186,19 @@
       display: inline-block;
     }
 
+    .btn-with-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
     .btn-primary {
       background: var(--gradient);
       color: white;
@@ -198,13 +211,14 @@
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text);
-      border: 1px solid var(--border);
+      background: transparent;
+      color: #F5F5F5;
+      border: 1px solid rgba(124, 143, 255, 0.4);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(124, 143, 255, 0.1);
+      border-color: rgba(124, 143, 255, 0.8);
       transform: translateY(-2px);
     }
 
