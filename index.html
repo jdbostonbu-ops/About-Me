@@ -281,24 +281,101 @@
     <p class="section-subtitle">
       A selection from my growing portfolio. Highlights include geospatial APIs, AI integrations, and serverless architecture.
     </p>
-
-    <div class="projects">
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/sap/" target="_blank">Security Awareness Platform</a></div>
-      <div class="project-pill"><a href="https://dev-play-nine.vercel.app/" target="_blank">Code Ranger</a></div>
-      <div class="project-pill"><a href="https://the-sky-falling.vercel.app/" target="_blank">The Sky Is Falling</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/frame-forge/" target="_blank">FRAME FORGE</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/Dog-Walking-Business/" target="_blank">Dog Walking Business</a></div>
-      <div class="project-pill"><a href="https://www.grumpybot.fyi/signup" target="_blank">The Grumpybot</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/image-reveal-project/" target="_blank">Image-Reveal Project</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/DeveloperPlayhouse/" target="_blank">Developer Playhouse</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/Next-Chapter-Labs/" target="_blank">Next Chapter</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/Training-Models/" target="_blank">Training Models</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/Claude-fused-culinary-recipe-page/" target="_blank">Culinary Geometry</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/ombre/" targe="_blank">Pomodoro Timer PWA</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/neon-nastalgia-theme-generator/" targe="_blank">Prism</a></div>
-      <div class="project-pill"><a href="https://story-pot.vercel.app/" targe="_blank">Story Pot PWA</a></div>
-      <div class="project-pill"><a href="https://www.anglercast.fyi/signup" targe="_blank">AnglerCast</a></div>
-      <div class="project-pill"><a href="https://jdbostonbu-ops.github.io/Brackish/" targe="_blank">Brackish Tax Estimator</a></div>
+    <div class="portfolio-feature">
+      <div class="portfolio-feature-media-wrap">
+        <img src="storypot.gif" alt="Story Pot project preview" class="portfolio-feature-media" />
+      </div>
+      <div class="portfolio-feature-copy">
+        <span class="portfolio-feature-kicker">Featured project</span>
+        <h3>Story Pot — Mobile-First Memory Archive</h3>
+        <p>
+          A mobile-first PWA for families and small teams who want to capture the recipes, songs, stories, and culture rituals that vanish when the people who hold them are gone.
+        </p>
+        <p>
+          Story Pot records audio and video directly in the browser, transcribes speech in 67 languages via the Web Speech API, and stores everything locally on your device with no account, no server, and no cloud. A two-mode Family / Team toggle switches the archive between parallel namespaces, so the same app can preserve a grandmother's recipes or a small team's culture rituals.
+        </p>
+        <div class="portfolio-tech-stack" aria-label="Tech stack">
+          <span>Vanilla JavaScript</span>
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>IndexedDB</span>
+          <span>localStorage</span>
+          <span>Web Audio API</span>
+          <span>MediaRecorder API</span>
+          <span>Web Speech API</span>
+          <span>PWA</span>
+          <span>GitHub Pages</span>
+          <span>Vercel</span>
+        </div>
+        <p class="portfolio-learning">
+          <strong>What I learned:</strong> How to architect a production PWA from five closure-based factory functions with two-tier storage, keeping lightweight metadata in localStorage and heavy media blobs in IndexedDB so the UI renders instantly while megabyte-sized recordings load only when needed.
+        </p>
+        <a href="https://story-pot.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary portfolio-live-link">Live link</a>
+      </div>
+    </div>
+    <div class="portfolio-feature">
+      <div class="portfolio-feature-media-wrap">
+        <img src="theskyisfalling.gif" alt="The Sky Is Falling project preview" class="portfolio-feature-media" />
+      </div>
+      <div class="portfolio-feature-copy">
+        <span class="portfolio-feature-kicker">Featured project</span>
+        <h3>The Sky Is Falling</h3>
+        <p>
+          A relaxed 3D browser game built on a Vibe Demo Friday, for anyone curious whether I can build outside standard full-stack CRUD work.
+        </p>
+        <p>
+          Players drag cartoon dinosaurs around a 3D world and try to catch falling geometric shapes in their baskets. There's no game over; the goal was a calm catch game, not a competitive one. Scores save to a persistent SQLite leaderboard through a real Express backend, demonstrating a complete full-stack round-trip from React state to a typed API and back.
+        </p>
+        <div class="portfolio-tech-stack" aria-label="Tech stack">
+          <span>React 18</span>
+          <span>TypeScript</span>
+          <span>Three.js</span>
+          <span>Vite</span>
+          <span>Express</span>
+          <span>Node.js</span>
+          <span>SQLite</span>
+          <span>Web Audio API</span>
+        </div>
+        <p class="portfolio-learning">
+          <strong>What I learned:</strong> How to combine declarative React rendering with Three.js's imperative 60fps animation loop using useRef for per-frame data and useState only for things that need to trigger re-renders.
+        </p>
+        <a href="https://the-sky-falling.vercel.app" target="_blank" rel="noopener" class="btn btn-primary portfolio-live-link">Live link</a>
+      </div>
+    </div>
+    <div class="portfolio-feature">
+      <div class="portfolio-feature-media-wrap">
+        <img src="grumpybot.gif" alt="GrumpyBot project preview" class="portfolio-feature-media" />
+      </div>
+      <div class="portfolio-feature-copy">
+        <span class="portfolio-feature-kicker">Featured project</span>
+        <h3>GrumpyBot — No-Code RAG Chatbot Platform</h3>
+        <p>
+          A no-code SaaS platform for students, new coders, and new entrepreneurs who want a real working AI chatbot for a portfolio, landing page, or first client before they have learned how to build one from scratch. I built GrumpyBot so beginners can ship a real working AI chatbot on their portfolio or landing page while they're still learning HTML, CSS, and iframe embedding. The skill they exercise is the embedding work — the bot itself just works.
+        </p>
+        <p>
+          Users upload .md, .txt, or .json documents and get back a working bot that answers only from the uploaded content. Behind the embed, I made sure that if the answer is not in the documents, the bot says it does not know.
+        </p>
+        <div class="portfolio-tech-stack" aria-label="Tech stack">
+          <span>Next.js 15</span>
+          <span>React 19</span>
+          <span>TypeScript</span>
+          <span>Neon Postgres</span>
+          <span>pgvector</span>
+          <span>Prisma ORM</span>
+          <span>OpenAI</span>
+          <span>gpt-4o-mini</span>
+          <span>text-embedding-3-small</span>
+          <span>SendGrid</span>
+          <span>Cloudflare DNS</span>
+          <span>Vercel</span>
+          <span>signed-cookie sessions</span>
+          <span>bcrypt</span>
+        </div>
+        <p class="portfolio-learning">
+          <strong>What I learned:</strong> How to build a grounded RAG pipeline from scratch and enforce document-only answers at the architecture level.
+        </p>
+        <a href="https://www.grumpybot.fyi/signup" target="_blank" rel="noopener" class="btn btn-primary portfolio-live-link">Live link</a>
+      </div>
     </div>
   </section>
 
