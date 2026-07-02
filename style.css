@@ -573,6 +573,16 @@
       letter-spacing: 0;
     }
 
+    .testimonial-author {
+      display: block;
+      margin-top: 16px;
+      color: var(--text-bright);
+      font-size: 0.68em;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     /* Project portfolio */
     .portfolio-feature {
       display: grid;
