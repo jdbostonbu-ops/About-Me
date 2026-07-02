@@ -1,4 +1,4 @@
-# Jacqueline Delgado — AI Collaborative Software Engineer & Founder of Hum LLC
+<h1 align="center">Jacqueline Delgado — AI Collaborative Software Engineer & Founder of Hum LLC</h1>
 
 <div align="center">
 
