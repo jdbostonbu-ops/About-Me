@@ -1420,6 +1420,16 @@
       padding: 40px 0;
     }
 
+    .automation-proof-label {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-3);
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
     /* Decorative quote marks — display block so they never overlap text */
     .pull-quote-text p {
       quotes: "C" "D";
@@ -1465,6 +1475,41 @@
       border-radius: 2px;
     }
 
+    .automation-proof-copy {
+      max-width: 620px;
+      margin: 0 auto 18px;
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .automation-flow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .automation-flow span {
+      position: relative;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--accent-3);
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 7px;
+      padding: 6px 9px;
+    }
+
+    .automation-flow span + span::before {
+      content: '->';
+      color: var(--text-dim);
+      opacity: 0.55;
+      margin-right: 8px;
+    }
+
     .pull-quote-attr {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
@@ -1475,6 +1520,8 @@
 
     @media (max-width: 640px) {
       .pull-quote-section { padding: 60px 24px; }
+      .automation-flow { gap: 7px; }
+      .automation-flow span + span::before { content: none; }
     }
 
 .quote-mark {
